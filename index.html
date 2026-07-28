@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人主页</title>
-    <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 文件 -->
+    <title>Ruiyao Wang 王睿尧 | 个人主页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -22,81 +20,71 @@
             </ul>
         </nav>
     </header>
- 
-<!-- ==================== 单曲音乐播放器 ==================== -->
 
-<section id="music-player">
-    <p>播放建议分别调小音量</p>
-    <h2>🎵 I wanted you —— Ina Wroldsen</h2>
-    <audio src="I wanted you.mp3" controls></audio>
+    <!-- ========== 音乐播放器 ========== -->
+    <section id="music-player">
+        <p class="music-tip">🎧 播放建议调小音量</p>
+        <div class="music-item">
+            <h2>🎵 I wanted you —— Ina Wroldsen</h2>
+            <audio src="music/I wanted you.mp3" controls></audio>
+        </div>
+        <div class="music-item">
+            <h2>🎵 Girl's talk —— Softly</h2>
+            <audio src="music/Girl's Talk.mp3" controls></audio>
+        </div>
+    </section>
 
-    <h2>🎵 Girl's talk —— Softly</h2>
-    <audio src="Girl's Talk.mp3" controls></audio>
-</section>
-
-
+    <!-- ========== 关于我 ========== -->
     <section id="about">
         <h2>关于我</h2>
         <p>你好，我是王睿尧，一名太原理工大学电子信息工程学院的在读大三生。欢迎浏览我的个人网页！</p>
     </section>
 
-
-    <section id="about">
-    <h2>在这个怀疑的年代，我们依然需要信仰</h2>
-    <br>
-    
-    <!-- Flex 容器，左右内边距不同，实现左右外侧距离不对称 -->
-    <div style="display: flex; gap: 30px; flex-wrap: wrap; align-items: flex-start; padding-left: 20px; padding-right: 20px;">
-        
-        <!-- 左侧卡片：Jame -->
-        <div style="flex: 1; min-width: 200px; max-width: 450px;">
-            <h3 style="margin: 0 0 8px 0;">❤️ 上帝 Jame</h3>
-            <img src="jame_sakura.jpg" alt="Jame" style="width: 100%; border-radius: 8px;">
-            <p>不小心点进比赛直播间，就听到解说：VP具有极强的韧性！<br>
-            <p>你说作为队长、指挥、狙击手，在赛场上要考虑的太多，<br>
-               狙击能力这辈子都没机会超越s1mple了，但是<br>
-               从默默无闻到决赛挑战王朝战队，<br>
-               从政治制裁到捧起Major奖杯，<br>
-               从沉沦三线到夺得Blast冠军，<br>
-               你让我明白一切皆有可能。
-            </p>
-            
+    <!-- ========== 信仰 ========== -->
+    <section id="belief">
+        <h2>在这个怀疑的年代，我们依然需要信仰</h2>
+        <div class="belief-cards">
+            <!-- 卡片1：Jame -->
+            <div class="belief-card">
+                <h3>❤️ 上帝 Jame</h3>
+                <img src="pictures/jame_sakura.jpg" alt="Jame">
+                <p>不小心点进比赛直播间，就听到解说：VP具有极强的韧性！<br>
+                   你说作为队长、指挥、狙击手，在赛场上要考虑的太多，<br>
+                   狙击能力这辈子都没机会超越s1mple了，但是<br>
+                   从默默无闻到决赛挑战王朝战队，<br>
+                   从政治制裁到捧起Major奖杯，<br>
+                   从沉沦三线到夺得Blast冠军，<br>
+                   你让我明白一切皆有可能。</p>
+            </div>
+            <!-- 卡片2：王力宏 -->
+            <div class="belief-card">
+                <h3>🌟 王力宏 Leehom</h3>
+                <img src="pictures/不可思议专辑封面.png" alt="王力宏">
+                <p>初升高的暑假，<br>
+                   我空降到2008年Sony Ericsson MusicMan世界巡回演唱会。<br>
+                   你如此《不可思议》，<br>
+                   你给我《爱的鼓励》，<br>
+                   你教我《不要害怕》，<br>
+                   你带我《改变自己》，<br>
+                   你让我知道"快乐永远来得及"。</p>
+            </div>
+            <!-- 卡片3：Michael Jackson -->
+            <div class="belief-card">
+                <h3>✨ Michael Jackson</h3>
+                <img src="pictures/MichaelJackson.jpg" alt="Michael Jackson">
+                <p>从小黄人广告的一曲《BAD》认识你，<br>
+                   对事业的执着，<br>
+                   对完美的追求，<br>
+                   谁不知道你每一次舞动背后多少练习，<br>
+                   谁不会敬佩上亿美元的捐款，<br>
+                   流言散尽，传奇不朽，<br>
+                   你永远是我价值观和审美的榜样。</p>
+            </div>
         </div>
-        
-        <!-- 中间卡片：王力宏 -->
-        <div style="flex: 1; min-width: 200px; max-width: 450px;">
-            <h3 style="margin: 0 0 8px 0;">🌟 王力宏 Leehom</h3>
-            <img src="不可思议专辑封面.png" alt="王力宏" style="width: 100%; border-radius: 8px;">
-            <p>初升高的暑假，<br>
-               我空降到2008年Sony Ericsson MusicMan世界巡回演唱会。<br>
-               你如此《不可思议》，<br>
-               你给我《爱的鼓励》，<br>
-               你教我《不要害怕》，<br>
-               你带我《改变自己》，<br>
-               你让我知道“快乐永远来得及”。
-            </p>
-        </div>
-
-        <!-- 右侧卡片：Michael Jackson -->
-        <div style="flex: 1; min-width: 200px; max-width: 450px;">
-            <h3 style="margin: 0 0 8px 0;">✨ Michael Jackson</h3>
-            <img src="MichaelJackson.jpg" alt="Michael Jackson" style="width: 100%; border-radius: 8px;">
-            <p>从小黄人广告的一曲《BAD》认识你，<br>
-               对事业的执着，<br>
-               对完美的追求，<br>
-               谁不知道你每一次舞动背后多少练习，<br>
-               谁不会敬佩上亿美元的捐款，<br>
-               流言散尽，传奇不朽，<br>
-               你永远是我价值观和审美的榜样。
-            </p>
-        </div>
-
-    </div>
-    <br>
-    <h3>浸没在失败、逆境与质疑之中的坚韧与不息，我会向你们学习</h3>
-    <br>
+        <h3 class="belief-footer">浸没在失败、逆境与质疑之中的坚韧与不息，我会向你们学习</h3>
     </section>
- 
+
+    <!-- ========== 项目 ========== -->
     <section id="projects">
         <h2>我的项目</h2>
         <p>这里是我参与过的一些项目：</p>
@@ -106,96 +94,69 @@
         </ul>
     </section>
 
-
-    <section id="Skills">
+    <!-- ========== 技术栈 ========== -->
+    <section id="skills">
         <h2>我的技术栈</h2>
-        <li>语言：</li>
-        <p>
-        （done）Python<br>
-        （doing）C++<br>
-        （doing）Linux<br>
-        （todo）SQL<br>
-        （todo）Latex<br>
-        （todo）Web前后端
-        </p>
-
-        <li>框架：</li>
-        <p>
-        （doing）Pytorch<br>
-        （doing）Tensorflow<br>
-        （done）NumPy<br>
-        （todo）MySQL<br>
-        （doing）Anaconda<br>
-        （doing）Git<br>
-        （done）OpenCV<br>
-        （doing）ROS1&ROS2</p>
+        <div class="skills-section">
+            <h4>语言：</h4>
+            <p>（done）Python<br>（doing）C++<br>（doing）Linux<br>（todo）SQL<br>（todo）Latex<br>（todo）Web前后端</p>
+        </div>
+        <div class="skills-section">
+            <h4>框架：</h4>
+            <p>（doing）Pytorch<br>（doing）Tensorflow<br>（done）NumPy<br>（todo）MySQL<br>（doing）Anaconda<br>（doing）Git<br>（done）OpenCV<br>（doing）ROS1&amp;ROS2</p>
+        </div>
     </section>
 
-
+    <!-- ========== 项目之外 ========== -->
     <section id="beyond_projects">
         <h2>项目之外</h2>
-        
-    <!-- ========== 行路 ========== -->
-    <h3>行路</h3>
-    <p>曾有人问过我：王睿尧你没钱还出去玩啊？这就不得不提的我的经济管理了，我只把钱花在旅行上</p>
-    <p>我尽量按时间顺序回忆：江苏、上海、山东、安徽、重庆、山西、陕西、河北、湖南、北京、浙江</p>
 
-    <!-- 2行5列图片网格 -->
-    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin: 20px 0;">
-        <!-- 第1列：登顶驼峰 + 石家庄驼峰 -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-            <img src="石家庄驼峰.jpg" alt="石家庄驼峰" style="width: 100%; height: auto; border-radius: 8px;">
-            <img src="登顶驼峰.jpg" alt="登顶驼峰" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <!-- 第2列：石家庄正定城墙 + 石家庄正定古塔 -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-            <img src="石家庄正定城墙.jpg" alt="石家庄正定城墙" style="width: 100%; height: auto; border-radius: 8px;">
-            <img src="石家庄正定古塔.jpg" alt="石家庄正定古塔" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <!-- 第3列：橘子洲头 + 柳叶湖 -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-            <img src="橘子洲头.jpg" alt="橘子洲头" style="width: 100%; height: auto; border-radius: 8px;">
-            <img src="柳叶湖.jpg" alt="柳叶湖" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <!-- 第4列：钟楼 + 听曲 -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-            <img src="钟楼.jpg" alt="钟楼" style="width: 100%; height: auto; border-radius: 8px;">
-            <img src="听曲.jpg" alt="听曲" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-        <!-- 第5列：重庆乌江 + 重庆和舅舅 -->
-        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
-            <img src="重庆乌江.jpg" alt="重庆乌江" style="width: 100%; height: auto; border-radius: 8px;">
-            <img src="重庆和舅舅.jpg" alt="重庆和舅舅" style="width: 100%; height: auto; border-radius: 8px;">
-        </div>
-    </div>
-            
+        <!-- 行路 -->
+        <h3>行路</h3>
+        <p>曾有人问过我：王睿尧你没钱还出去玩啊？这就不得不提的我的经济管理了，我只把钱花在旅行上</p>
+        <p>我尽量按时间顺序回忆：江苏、上海、山东、安徽、重庆、山西、陕西、河北、湖南、北京、浙江</p>
 
+        <div class="travel-grid">
+            <!-- 第1列 -->
+            <div class="travel-col">
+                <img src="pictures/石家庄驼峰.jpg" alt="石家庄驼峰">
+                <img src="pictures/登顶驼峰.jpg" alt="登顶驼峰">
+            </div>
+            <!-- 第2列 -->
+            <div class="travel-col">
+                <img src="pictures/石家庄正定城墙.jpg" alt="石家庄正定城墙">
+                <img src="pictures/石家庄正定古塔.jpg" alt="石家庄正定古塔">
+            </div>
+            <!-- 第3列 -->
+            <div class="travel-col">
+                <img src="pictures/橘子洲头.jpg" alt="橘子洲头">
+                <img src="pictures/柳叶湖.jpg" alt="柳叶湖">
+            </div>
+            <!-- 第4列 -->
+            <div class="travel-col">
+                <img src="pictures/钟楼.jpg" alt="钟楼">
+                <img src="pictures/陕西大剧院听曲.jpg" alt="听曲">
+            </div>
+            <!-- 第5列 -->
+            <div class="travel-col">
+                <img src="pictures/重庆乌江.jpg" alt="重庆乌江">
+                <img src="pictures/重庆和舅舅.jpg" alt="重庆和舅舅">
+            </div>
+        </div>
+
+        <!-- 瞬间 -->
         <h3>瞬间</h3>
         <p>我知道，人只活几个瞬间</p>
-        <ul>
-            <li>我爸：你岁数已经两位数了。<br>
-               这是我第一次有了一瞬间的思考。</li>
-            
-            <li>下课了，我问何老师（恩师何钦泽，超爱熬夜）要了管柠檬黄。<br>
-               他给了我大大一包，当然他也只有这个规格的。<br>
-               我说为什么我画的没有别人好？<br>
-               时候未到。</li>
-
-            <li>我常常让老妈右拐，<br>
-                你干嘛，这条路回家最近。</li>
-
-            <li>项林涛：尧哥回明向没，本来想提袋橘子给你的。<br>
-                下一站就去橘子洲头！欸，涛哥就是湖南的，再去常德转一圈</li>
-
-            <li>足球课，一陌生男子走到我身后，<br>
-                我们上。<br>
-                PS:如果你点进来看到了这句话，请不要告知我(///▽///)</li>
-
-
+        <ul class="moment-list">
+            <li>我爸：你岁数已经两位数了。<br>这是我第一次有了一瞬间的思考。</li>
+            <li>下课了，我问何老师（恩师何钦泽，超爱熬夜）要了管柠檬黄。<br>他给了我大大一包，当然他也只有这个规格的。<br>我说为什么我画的没有别人好？<br>时候未到。</li>
+            <li>我常常让老妈右拐，<br>你干嘛，这条路回家最近。要走自己放假走去。</li>
+            <li>项林涛：尧哥回明向没，本来想提袋橘子给你的。<br>下一站就去橘子洲头！欸，涛哥就是湖南的，再去常德转一圈</li>
+            <li>足球课，一陌生男子走到我身后，<br>我们上。<br>PS:如果你点进来看到了这句话，请不要告知我(///▽///)</li>
         </ul>
     </section>
- 
 
+    <!-- ========== 联系方式 ========== -->
     <section id="contact">
         <h2>联系方式</h2>
         <p>你可以通过以下方式联系我：</p>
@@ -208,53 +169,38 @@
         </ul>
     </section>
 
+    <!-- ========== 拾穗 ========== -->
     <section id="pickup">
-    <h2>拾穗</h2>
-    <p>拾穗是我在via上见到的，我觉得特别好，就借用了，点击下面按钮即可看到</p>
-    <button onclick="showMore()">这是这次更新的拾穗</button>
-    <p id="more" style="display:none;">
-        十分好月，不照人圆-----2026/7/14<br>
-        遍身罗绮者，不是养蚕人-----2026/7/15<br>
-        鱼没浪痕圆，流红起，翻笑东风难扫-----2026/7/26<br>
-    </p>
+        <h2>拾穗</h2>
+        <p>拾穗是我在via上见到的，我觉得特别好，就借用了，点击下面按钮即可看到</p>
+        <button onclick="showMore()">这是这次更新的拾穗</button>
+        <p id="more" style="display:none;">
+            十分好月，不照人圆-----2026/7/14<br>
+            遍身罗绮者，不是养蚕人-----2026/7/15<br>
+            鱼没浪痕圆，流红起，翻笑东风难扫-----2026/7/26
+        </p>
     </section>
 
-
+    <!-- ========== 留言板 ========== -->
     <section id="guestbook">
-    <h2>📝 匿名留言板</h2>
-    <p>无需登录，留下你想说的吧~</p>
+        <h2>📝 匿名留言板</h2>
+        <p>无需登录，留下你想说的吧~(目前只有我能看到留言内容)</p>
 
-    <!-- 留言表单 -->
-    <form id="messageForm" style="margin-bottom: 20px;">
-        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 500px;">
-            <input type="text" id="nickname" placeholder="你的昵称（可选）" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc;">
-            <textarea id="content" placeholder="写点什么..." rows="3" style="padding: 8px; border-radius: 6px; border: 1px solid #ccc; resize: vertical;"></textarea>
-            <button type="submit" style="padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: bold;">发布留言</button>
-        </div>
-    </form>
+        <form id="messageForm">
+            <div class="form-group">
+                <input type="text" id="nickname" placeholder="你的昵称（可选）">
+                <textarea id="content" placeholder="写点什么..." rows="3"></textarea>
+                <button type="submit">发布留言</button>
+            </div>
+        </form>
 
-    <!-- 留言列表 -->
-    <div id="messageList" style="display: flex; flex-direction: column; gap: 12px; max-width: 600px;">
-        <!-- 动态渲染 -->
-    </div>
+        <div id="messageList"></div>
     </section>
-
 
     <footer>
-        <p>&copy; 2026 [你的名字]。所有权利保留。</p>
+        <p>&copy; 2026 王睿尧。所有权利保留。</p>
     </footer>
- 
 
-<script>
-function showMore() {
-    var moreContent = document.getElementById('more');
-    if (moreContent.style.display === 'none') {
-        moreContent.style.display = 'block';
-    } else {
-        moreContent.style.display = 'none';
-    }
-}
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>

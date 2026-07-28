@@ -1,94 +1,418 @@
-
-/* 重置一些默认的样式 */
+/* ===== 全局重置 ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
- 
+
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    
+    padding: 0 16px;
 }
- 
+
+/* ===== 头部 ===== */
 header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 16px 0;
     text-align: center;
+    border-radius: 8px;
+    margin-top: 16px;
 }
- 
+
+header h1 {
+    font-size: 1.8rem;
+}
+
 nav ul {
     list-style: none;
-    padding: 0;
+    padding: 8px 0 0 0;
 }
- 
+
 nav ul li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 12px;
 }
- 
+
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: 400;
+    transition: color 0.2s;
 }
- 
+
+nav ul li a:hover {
+    color: #aac7ff;
+}
+
+/* ===== 通用 section ===== */
 section {
-    padding: 20px;
-    margin: 20px;
+    padding: 24px 20px;
+    margin: 20px 0;
     background-color: #fff;
-    border-radius: 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
- 
+
 h2 {
-    color: #333;
-}
- 
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #333;
-    color: #fff;
-
-
-/* 留言板整体样式（按需调整） */
-#guestbook {
-    margin: 40px 0;
+    color: #1e293b;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
 }
 
-#messageList .message-item {
-    background: #f8fafc;
-    border-radius: 10px;
-    padding: 14px 18px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    border-left: 4px solid #4f46e5;
+h3 {
+    color: #334155;
+    font-size: 1.2rem;
+    margin: 16px 0 8px 0;
 }
 
-.message-item .msg-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
+h4 {
     color: #475569;
-    margin-bottom: 6px;
+    font-size: 1rem;
+    margin: 8px 0 4px 0;
 }
 
-.message-item .msg-name {
+p {
+    color: #475569;
+    margin: 6px 0;
+}
+
+ul {
+    padding-left: 20px;
+    color: #475569;
+}
+
+ul li {
+    margin: 6px 0;
+}
+
+a {
+    color: #4f46e5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ===== 音乐播放器 ===== */
+#music-player .music-tip {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+#music-player .music-item {
+    margin-bottom: 20px;
+}
+
+#music-player audio {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin-top: 6px;
+}
+
+/* ===== 信仰卡片 ===== */
+.belief-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 0 4px;
+}
+
+.belief-card {
+    flex: 1;
+    min-width: 200px;
+    max-width: 450px;
+}
+
+.belief-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+}
+
+.belief-card img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.belief-card p {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.belief-footer {
+    margin-top: 20px;
+    font-weight: 400;
+    color: #475569;
+}
+
+/* ===== 技术栈 ===== */
+.skills-section {
+    margin: 8px 0;
+}
+
+.skills-section h4 {
     font-weight: 700;
     color: #1e293b;
 }
 
-.message-item .msg-time {
+.skills-section p {
+    margin: 4px 0 8px 16px;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* ===== 行路图片网格 ===== */
+.travel-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    margin: 16px 0 24px 0;
+}
+
+.travel-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.travel-col img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* ===== 瞬间列表 ===== */
+.moment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.moment-list li {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-left: 4px solid #4f46e5;
+    line-height: 1.7;
+    color: #334155;
+}
+
+/* ===== 拾穗 ===== */
+#pickup button {
+    padding: 10px 24px;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+#pickup button:hover {
+    background: #4338ca;
+}
+
+#more {
+    margin-top: 12px;
+    background: #f1f5f9;
+    padding: 14px 18px;
+    border-radius: 8px;
+    line-height: 1.8;
+    color: #334155;
+}
+
+/* ===== 留言板 ===== */
+#guestbook .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+}
+
+#guestbook input,
+#guestbook textarea {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #d1d9e6;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+#guestbook input:focus,
+#guestbook textarea:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+#guestbook button[type="submit"] {
+    padding: 10px 20px;
+    background: #4f46e5;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+#guestbook button[type="submit"]:hover {
+    background: #4338ca;
+}
+
+#messageList {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin-top: 16px;
+}
+
+.message-item {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #4f46e5;
+}
+
+.msg-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 4px;
+}
+
+.msg-name {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.msg-time {
     color: #94a3b8;
     font-size: 0.8rem;
 }
 
-.message-item .msg-content {
-    margin: 6px 0 0 0;
+.msg-content {
+    margin: 4px 0 0 0;
     word-break: break-word;
     line-height: 1.5;
 }
 
+/* ===== 页脚 ===== */
+footer {
+    text-align: center;
+    padding: 16px 0;
+    background-color: transparent;  /* 无背景 */
+    color: #000;                    /* 纯黑字 */
+    margin: 16px 0;
+    /* border-radius 和 background-color 移除或设置为透明 */
+}
 
+/* ============================================================ */
+/* ===== 响应式：手机端（屏幕宽度 ≤ 768px） ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 16px 14px;
+        margin: 12px 0;
+    }
+
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    /* 信仰卡片：手机上一列 */
+    .belief-cards {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .belief-card {
+        max-width: 100%;
+    }
+
+    /* 行路图片：手机上一列 */
+    .travel-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .travel-col {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .travel-col img {
+        width: 50%;
+    }
+
+    /* 音乐播放器 */
+    #music-player audio {
+        max-width: 100%;
+    }
+
+    /* 留言板 */
+    #guestbook .form-group {
+        max-width: 100%;
+    }
+
+    #messageList {
+        max-width: 100%;
+    }
+
+    /* 拾穗按钮 */
+    #pickup button {
+        width: 100%;
+    }
+}
+
+/* ===== 小屏幕手机（宽度 ≤ 480px） ===== */
+@media (max-width: 480px) {
+    nav ul li {
+        margin: 0 6px;
+        font-size: 0.8rem;
+    }
+
+    .travel-col {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .travel-col img {
+        width: 100%;
+    }
+
+    .belief-card p {
+        font-size: 0.9rem;
+    }
+}

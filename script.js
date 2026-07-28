@@ -17,7 +17,7 @@ function renderMessages() {
     const container = document.getElementById('messageList');
     const messages = getMessages();
     if (messages.length === 0) {
-        container.innerHTML = '<p style="color: #94a3b8;">还没有留言，快来抢沙发吧 🛋️</p>';
+        container.innerHTML = '<p style="color: #94a3b8; padding: 8px 0;">欢迎对我的主页提出建议！😁</p>';
         return;
     }
     // 按时间倒序（最新在前）
@@ -33,7 +33,7 @@ function renderMessages() {
     `).join('');
 }
 
-// 简单的防 XSS 转义（仅作为演示）
+// 简单的防 XSS 转义
 function escapeHtml(text) {
     if (!text) return '';
     return text.replace(/[&<>"]/g, function(m) {
@@ -46,32 +46,45 @@ function escapeHtml(text) {
 }
 
 // 处理表单提交
-document.getElementById('messageForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const nickname = document.getElementById('nickname').value.trim();
-    const content = document.getElementById('content').value.trim();
-    if (!content) {
-        alert('请输入留言内容！');
-        return;
-    }
+const form = document.getElementById('messageForm');
+if (form) {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nickname = document.getElementById('nickname').value.trim();
+        const content = document.getElementById('content').value.trim();
+        if (!content) {
+            alert('请输入留言内容！');
+            return;
+        }
 
-    const messages = getMessages();
-    const now = new Date();
-    const timeStr = now.toLocaleString('zh-CN', { hour12: false });
-    messages.push({
-        nickname: nickname || '匿名',
-        content: content,
-        time: timeStr
+        const messages = getMessages();
+        const now = new Date();
+        const timeStr = now.toLocaleString('zh-CN', { hour12: false });
+        messages.push({
+            nickname: nickname || '匿名',
+            content: content,
+            time: timeStr
+        });
+        saveMessages(messages);
+        renderMessages();
+
+        // 清空表单
+        document.getElementById('nickname').value = '';
+        document.getElementById('content').value = '';
     });
-    saveMessages(messages);
-    renderMessages();
+}
 
-    // 清空表单
-    document.getElementById('nickname').value = '';
-    document.getElementById('content').value = '';
-});
+// ========== 拾穗按钮 ==========
+function showMore() {
+    var moreContent = document.getElementById('more');
+    if (moreContent) {
+        if (moreContent.style.display === 'none') {
+            moreContent.style.display = 'block';
+        } else {
+            moreContent.style.display = 'none';
+        }
+    }
+}
 
 // 页面加载时渲染已有留言
-window.addEventListener('DOMContentLoaded', renderMessages);
-
-
+document.addEventListener('DOMContentLoaded', renderMessages);
