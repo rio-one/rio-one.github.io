@@ -1,0 +1,94 @@
+
+/* 重置一些默认的样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    
+}
+ 
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+ 
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+ 
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+ 
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+ 
+h2 {
+    color: #333;
+}
+ 
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+
+
+/* 留言板整体样式（按需调整） */
+#guestbook {
+    margin: 40px 0;
+}
+
+#messageList .message-item {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 14px 18px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    border-left: 4px solid #4f46e5;
+}
+
+.message-item .msg-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.message-item .msg-name {
+    font-weight: 700;
+    color: #1e293b;
+}
+
+.message-item .msg-time {
+    color: #94a3b8;
+    font-size: 0.8rem;
+}
+
+.message-item .msg-content {
+    margin: 6px 0 0 0;
+    word-break: break-word;
+    line-height: 1.5;
+}
+
+
