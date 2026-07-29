@@ -181,25 +181,35 @@
         </p>
     </section>
 
-    <!-- ========== 留言板 ========== -->
+    <!-- ========== 留言板（Giscus） ========== -->
     <section id="guestbook">
-        <h2>📝 匿名留言板</h2>
-        <p>无需登录，留下你想说的吧~(目前只有我能看到留言内容)</p>
-
-        <form id="messageForm">
-            <div class="form-group">
-                <input type="text" id="nickname" placeholder="你的昵称（可选）">
-                <textarea id="content" placeholder="写点什么..." rows="3"></textarea>
-                <button type="submit">发布留言</button>
-            </div>
-        </form>
-
-        <div id="messageList"></div>
+        <h2>💬 留言板</h2>
+        <p>使用 GitHub 账号登录后即可留言，所有留言将存储在此仓库的 Discussions 中</p>
+        <div class="giscus-wrapper">
+            <div class="giscus"></div>
+        </div>
     </section>
 
     <footer>
         <p>&copy; 2026 王睿尧。所有权利保留。</p>
     </footer>
+
+    <!-- ========== Giscus 脚本 ========== -->
+    <script src="https://giscus.app/client.js"
+        data-repo="rio-one/rio-one.github.io"
+        data-repo-id="R_kgDOTl3iVA"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOTl3iVM4DCOHJ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
 
     <script src="script.js"></script>
 </body>

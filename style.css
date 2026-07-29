@@ -235,95 +235,32 @@ a:hover {
     color: #334155;
 }
 
-/* ===== 留言板 ===== */
-#guestbook .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    max-width: 500px;
+/* ===== 留言板（Giscus）- 靠左，适中宽度 ===== */
+#guestbook .giscus-wrapper {
+    max-width: 700px;      /* 限制最大宽度，可根据需要调整 */
+    margin: 0;             /* 靠左对齐，不居中 */
+    padding: 0 4px;
 }
 
-#guestbook input,
-#guestbook textarea {
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #d1d9e6;
-    font-size: 1rem;
-    font-family: inherit;
-    transition: border-color 0.2s;
+/* Giscus 在移动端自适应 */
+.giscus,
+.giscus-wrapper {
+    width: 100%;
 }
 
-#guestbook input:focus,
-#guestbook textarea:focus {
-    outline: none;
-    border-color: #4f46e5;
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
-}
-
-#guestbook button[type="submit"] {
-    padding: 10px 20px;
-    background: #4f46e5;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: background 0.2s;
-}
-
-#guestbook button[type="submit"]:hover {
-    background: #4338ca;
-}
-
-#messageList {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 600px;
-    margin-top: 16px;
-}
-
-.message-item {
-    background: #f8fafc;
-    border-radius: 10px;
-    padding: 14px 18px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    border-left: 4px solid #4f46e5;
-}
-
-.msg-meta {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: #475569;
-    margin-bottom: 4px;
-}
-
-.msg-name {
-    font-weight: 700;
-    color: #1e293b;
-}
-
-.msg-time {
-    color: #94a3b8;
-    font-size: 0.8rem;
-}
-
-.msg-content {
-    margin: 4px 0 0 0;
-    word-break: break-word;
-    line-height: 1.5;
+/* Giscus 在移动端自适应 */
+.giscus,
+.giscus-wrapper {
+    width: 100%;
 }
 
 /* ===== 页脚 ===== */
 footer {
     text-align: center;
     padding: 16px 0;
-    background-color: transparent;  /* 无背景 */
-    color: #000;                    /* 纯黑字 */
+    background-color: transparent;
+    color: #000;
     margin: 16px 0;
-    /* border-radius 和 background-color 移除或设置为透明 */
 }
 
 /* ============================================================ */
@@ -351,7 +288,6 @@ footer {
         font-size: 1.3rem;
     }
 
-    /* 信仰卡片：手机上一列 */
     .belief-cards {
         flex-direction: column;
         gap: 24px;
@@ -361,7 +297,6 @@ footer {
         max-width: 100%;
     }
 
-    /* 行路图片：手机上一列 */
     .travel-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -376,23 +311,17 @@ footer {
         width: 50%;
     }
 
-    /* 音乐播放器 */
     #music-player audio {
         max-width: 100%;
     }
 
-    /* 留言板 */
-    #guestbook .form-group {
-        max-width: 100%;
-    }
-
-    #messageList {
-        max-width: 100%;
-    }
-
-    /* 拾穗按钮 */
     #pickup button {
         width: 100%;
+    }
+
+    #guestbook .giscus-wrapper {
+        max-width: 100%;   /* 手机上自动占满，但不会溢出 */
+        padding: 0;
     }
 }
 
